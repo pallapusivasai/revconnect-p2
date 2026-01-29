@@ -1,16 +1,41 @@
 package com.revconnect.model;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="posts")
+@Table(name = "posts")
 public class Post {
-    @Id @GeneratedValue
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne private User user;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @Column(nullable = false)
     private String content;
-    public Long getId(){return id;}
-    public User getUser(){return user;}
-    public String getContent(){return content;}
-    public void setUser(User u){user=u;}
-    public void setContent(String c){content=c;}
+
+    // getters
+    public Long getId() {
+        return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    // setters
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

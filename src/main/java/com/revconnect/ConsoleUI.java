@@ -2,10 +2,11 @@ package com.revconnect;
 
 import com.revconnect.model.User;
 import com.revconnect.service.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
@@ -13,27 +14,55 @@ import java.util.Scanner;
 @Profile("!test")
 public class ConsoleUI implements CommandLineRunner {
 
-    @Autowired private AuthService authService;
-    @Autowired private PostService postService;
-    @Autowired private LikeService likeService;
-    @Autowired private FollowService followService;
-    @Autowired private CommentService commentService;
-    @Autowired private NotificationService notificationService;
+    private static final Logger logger =
+            LogManager.getLogger(ConsoleUI.class);
+
+    private final AuthService authService;
+    private final PostService postService;
+    private final LikeService likeService;
+    private final FollowService followService;
+    private final CommentService commentService;
+    private final NotificationService notificationService;
 
     private final Scanner sc = new Scanner(System.in);
 
+    // ✅ Constructor Injection (BEST PRACTICE)
+    public ConsoleUI(
+            AuthService authService,
+            PostService postService,
+            LikeService likeService,
+            FollowService followService,
+            CommentService commentService,
+            NotificationService notificationService
+    ) {
+        this.authService = authService;
+        this.postService = postService;
+        this.likeService = likeService;
+        this.followService = followService;
+        this.commentService = commentService;
+        this.notificationService = notificationService;
+    }
+
     @Override
     public void run(String... args) {
+
+        logger.info("Console UI started");
+
         while (true) {
             System.out.println("\n=== RevConnect ===");
             System.out.println("1. Register");
             System.out.println("2. Login");
             System.out.println("3. Exit");
             System.out.print("Enter choice: ");
+
             int ch = Integer.parseInt(sc.nextLine());
+
             if (ch == 1) register();
             else if (ch == 2) login();
-            else System.exit(0);
+            else {
+                logger.info("Application exited by user");
+                System.exit(0);
+            }
         }
     }
 
@@ -42,6 +71,8 @@ public class ConsoleUI implements CommandLineRunner {
         String e = sc.nextLine();
         System.out.print("Password: ");
         String p = sc.nextLine();
+
+        logger.debug("Register menu selected");
         System.out.println(authService.register(e, p));
     }
 
@@ -50,16 +81,22 @@ public class ConsoleUI implements CommandLineRunner {
         String e = sc.nextLine();
         System.out.print("Password: ");
         String p = sc.nextLine();
+
         User u = authService.login(e, p);
+
         if (u == null) {
             System.out.println("❌ Login failed");
             return;
         }
+
         System.out.println("✅ Login successful");
         dashboard(u);
     }
 
     private void dashboard(User u) {
+
+        logger.info("User entered dashboard: {}", u.getEmail());
+
         while (true) {
             System.out.println("\n=== User Dashboard ===");
             System.out.println("Logged in as: " + u.getEmail());
@@ -75,19 +112,59 @@ public class ConsoleUI implements CommandLineRunner {
             System.out.println("9. View Notifications");
             System.out.println("10. Logout");
             System.out.print("Enter choice: ");
+
             int ch = Integer.parseInt(sc.nextLine());
 
             switch (ch) {
-                case 1 -> System.out.println(postService.createPost(u, sc));
+
+                case 1 -> {
+                    System.out.print("Enter post content: ");
+                    String content = sc.nextLine();
+                    System.out.println(postService.createPost(u, content));
+                }
+
                 case 2 -> postService.viewMyPosts(u);
+
                 case 3 -> postService.viewFeed();
-                case 4 -> System.out.println(likeService.like(u, sc));
-                case 5 -> System.out.println(likeService.unlike(u, sc));
-                case 6 -> System.out.println(commentService.comment(u, sc));
-                case 7 -> System.out.println(followService.follow(u, sc));
-                case 8 -> System.out.println(followService.unfollow(u, sc));
+
+                case 4 -> {
+                    System.out.print("Enter Post ID to like: ");
+                    Long postId = Long.parseLong(sc.nextLine());
+                    System.out.println(likeService.like(u, postId));
+                }
+
+                case 5 -> {
+                    System.out.print("Enter Post ID to unlike: ");
+                    Long postId = Long.parseLong(sc.nextLine());
+                    System.out.println(likeService.unlike(u, postId));
+                }
+
+                case 6 -> {
+                    System.out.print("Enter Post ID: ");
+                    Long postId = Long.parseLong(sc.nextLine());
+                    System.out.print("Enter comment: ");
+                    String text = sc.nextLine();
+                    System.out.println(commentService.comment(u, postId, text));
+                }
+
+                case 7 -> {
+                    System.out.print("Enter User ID to follow: ");
+                    Long userId = Long.parseLong(sc.nextLine());
+                    System.out.println(followService.follow(u, userId));
+                }
+
+                case 8 -> {
+                    System.out.print("Enter User ID to unfollow: ");
+                    Long userId = Long.parseLong(sc.nextLine());
+                    System.out.println(followService.unfollow(u, userId));
+                }
+
                 case 9 -> notificationService.view(u);
-                case 10 -> { return; }
+
+                case 10 -> {
+                    logger.info("User logged out: {}", u.getEmail());
+                    return;
+                }
             }
         }
     }

@@ -1,25 +1,48 @@
 package com.revconnect.service;
-import com.revconnect.model.*;
+
+import com.revconnect.model.Post;
+import com.revconnect.model.User;
 import com.revconnect.repository.PostRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
-import java.util.Scanner;
+
+import java.util.List;
 
 @Service
 public class PostService {
-    @Autowired private PostRepository repo;
-    public String createPost(User u,Scanner sc){
-        System.out.print("Enter post content: ");
-        String c=sc.nextLine();
-        Post p=new Post();p.setUser(u);p.setContent(c);repo.save(p);
+
+    private static final Logger logger =
+            LogManager.getLogger(PostService.class);
+
+    private final PostRepository repo;
+
+    public PostService(PostRepository repo) {
+        this.repo = repo;
+    }
+
+    public String createPost(User user, String content) {
+
+        Post post = new Post();
+        post.setUser(user);
+        post.setContent(content);
+
+        repo.save(post);
+
+        logger.info("Post created by user {}", user.getEmail());
         return "✅ Post created";
     }
-    public void viewMyPosts(User u){
-        System.out.println("\n=== My Posts ===");
-        repo.findByUser(u).forEach(p->System.out.println("Post ID "+p.getId()+": "+p.getContent()));
+
+    public void viewMyPosts(User user) {
+        logger.info("Viewing posts for user {}", user.getEmail());
+        repo.findByUser(user)
+                .forEach(p -> System.out.println("📝 " + p.getContent()));
     }
-    public void viewFeed(){
-        System.out.println("\n=== Feed ===");
-        repo.findAllByOrderByIdDesc().forEach(p->System.out.println("Post ID "+p.getId()+": "+p.getContent()));
+
+    public void viewFeed() {
+        logger.info("Viewing feed");
+        repo.findAllByOrderByIdDesc()
+                .forEach(p ->
+                        System.out.println(p.getUser().getEmail() + ": " + p.getContent()));
     }
 }
