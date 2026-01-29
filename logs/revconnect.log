@@ -1,3 +1,33 @@
 2026-01-29 10:59:16 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
 2026-01-29 10:59:47 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
 2026-01-29 11:04:03 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:07:03 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:19:41 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:20:01 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:28:55 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:33:55 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:35:55 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:39:38 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:44:21 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:53:10 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:59:52 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-29 12:59:53 INFO  com.revconnect.RevConnectApplication - Starting RevConnectApplication using Java 17.0.12 with PID 13696 (D:\revconnect-p2\target\classes started by palla in D:\revconnect-p2)
+2026-01-29 12:59:53 INFO  com.revconnect.RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-29 12:59:54 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-29 12:59:54 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 6 JPA repository interfaces.
+2026-01-29 12:59:54 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-29 12:59:54 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-01-29 12:59:54 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-29 12:59:55 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-29 12:59:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-29 12:59:55 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49c1e294
+2026-01-29 12:59:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-29 12:59:55 WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-29 12:59:57 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-29 12:59:57 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29 12:59:58 INFO  com.revconnect.RevConnectApplication - Started RevConnectApplication in 5.41 seconds (process running for 6.404)
+2026-01-29 12:59:58 INFO  com.revconnect.ConsoleUI - Console UI started
+2026-01-29 13:00:10 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29 13:00:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-29 13:00:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-29 13:00:13 INFO  com.revconnect.RevConnectApplication - RevConnect application starting

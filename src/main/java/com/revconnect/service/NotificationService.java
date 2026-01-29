@@ -5,6 +5,8 @@ import com.revconnect.model.User;
 import com.revconnect.repository.NotificationRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class NotificationService {
 
@@ -15,23 +17,26 @@ public class NotificationService {
     }
 
     public void send(User user, String message) {
-
         Notification n = new Notification();
         n.setUser(user);
         n.setMessage(message);
         n.setSeen(false);
-
         repo.save(n);
     }
 
-    public void view(User user) {
+    // ✅ RETURN data (no System.out)
+    public List<String> view(User user) {
 
-        System.out.println("\n=== Notifications ===");
+        var list = repo.findByUser_IdAndSeenFalse(user.getId());
 
-        repo.findByUserAndSeenFalse(user).forEach(n -> {
-            System.out.println("🔔 " + n.getMessage());
+        list.forEach(n -> {
             n.setSeen(true);
             repo.save(n);
         });
+
+        return list.stream()
+                .map(Notification::getMessage)
+                .toList();
     }
+
 }

@@ -1,17 +1,52 @@
 package com.revconnect.model;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="notifications")
+@Table(name = "notifications")
 public class Notification {
-    @Id @GeneratedValue
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false) // ✅ FIX 1
+    private User user;
+
+    @Column(nullable = false)
     private String message;
-    private boolean seen=false;
-    public void setUser(User u){user=u;}
-    public void setMessage(String m){message=m;}
-    public void setSeen(boolean s){seen=s;}
-    public String getMessage(){return message;}
-    public boolean isSeen(){return seen;}
+
+    @Column(nullable = false)
+    private boolean seen = false;
+
+    // ✅ REQUIRED getters
+    public Long getId() {
+        return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public boolean isSeen() {
+        return seen;
+    }
+
+    // setters
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setSeen(boolean seen) {
+        this.seen = seen;
+    }
 }

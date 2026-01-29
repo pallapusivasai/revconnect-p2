@@ -130,8 +130,11 @@ public class ConsoleUI implements CommandLineRunner {
                 case 4 -> {
                     System.out.print("Enter Post ID to like: ");
                     Long postId = Long.parseLong(sc.nextLine());
-                    System.out.println(likeService.like(u, postId));
+
+                    String result = likeService.like(u, postId);
+                    System.out.println(result);   // ✅ THIS LINE WAS MISSING
                 }
+
 
                 case 5 -> {
                     System.out.print("Enter Post ID to unlike: ");
@@ -159,12 +162,25 @@ public class ConsoleUI implements CommandLineRunner {
                     System.out.println(followService.unfollow(u, userId));
                 }
 
-                case 9 -> notificationService.view(u);
+                case 9 -> {
+                    var messages = notificationService.view(u);
+
+                    System.out.println("\n=== Notifications ===");
+
+                    if (messages.isEmpty()) {
+                        System.out.println("📭 No new notifications");
+                    } else {
+                        messages.forEach(m -> System.out.println("🔔 " + m));
+                    }
+                }
+
 
                 case 10 -> {
                     logger.info("User logged out: {}", u.getEmail());
                     return;
                 }
+
+                default -> System.out.println("❌ Invalid choice");
             }
         }
     }

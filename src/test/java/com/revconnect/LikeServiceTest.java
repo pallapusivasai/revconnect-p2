@@ -8,13 +8,9 @@ import com.revconnect.service.LikeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.Scanner;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.springframework.test.context.ActiveProfiles;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -31,22 +27,26 @@ class LikeServiceTest {
 
     @Test
     void testDuplicateLikePrevention() {
+
+        // Arrange: create user
         User user = new User();
         user.setEmail("like@gmail.com");
         user.setPassword("1234");
         userRepo.save(user);
 
+        // Arrange: create post
         Post post = new Post();
         post.setUser(user);
         post.setContent("Test Post");
         postRepo.save(post);
 
-        Scanner sc = new Scanner(post.getId() + "\n");
-        String first = likeService.like(user, sc);
+        Long postId = post.getId();
 
-        Scanner sc2 = new Scanner(post.getId() + "\n");
-        String second = likeService.like(user, sc2);
+        // Act: like twice
+        String first = likeService.like(user, postId);
+        String second = likeService.like(user, postId);
 
+        // Assert
         assertEquals("❤️ Post liked", first);
         assertEquals("⚠ Already liked", second);
     }
