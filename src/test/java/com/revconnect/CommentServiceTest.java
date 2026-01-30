@@ -1,4 +1,4 @@
-package java.com.revconnect;
+package com.revconnect;
 
 import com.revconnect.model.Post;
 import com.revconnect.model.User;

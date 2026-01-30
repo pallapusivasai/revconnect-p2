@@ -1,4 +1,4 @@
-package java.com.revconnect;
+package com.revconnect;
 
 import com.revconnect.exception.RevConnectException;
 import com.revconnect.model.User;

@@ -404,3 +404,33 @@ java.lang.NumberFormatException: For input string: "�"
 2026-01-30 15:03:17 WARN  [main] AuthService - User already exists: dup@gmail.com
 2026-01-30 15:19:47 WARN  [main] LikeService - User like@gmail.com already liked post 1
 2026-01-30 15:19:48 WARN  [main] AuthService - User already exists: dup@gmail.com
+2026-01-30 15:51:03 ERROR [main] ConsoleUI - Unexpected error
+java.lang.NumberFormatException: For input string: "�"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 16:03:34 WARN  [main] LikeService - User like@test.com already liked post 1
+2026-01-30 16:03:34 WARN  [main] AuthService - User already exists: dup@gmail.com
+2026-01-30 16:03:58 WARN  [main] AuthService - User already exists: dup@gmail.com
+2026-01-30 16:03:59 WARN  [main] LikeService - User like@test.com already liked post 2
