@@ -1,135 +1,56 @@
-# RevConnect – Console Based Social Media Application
+# RevConnect – Console-Based Social Media Application
 
-RevConnect is a console-based social media application developed using Spring Boot, Spring Data JPA, Maven, and MySQL.
-The application allows users to interact through posts, likes, comments, follows, and notifications using a
-command-line interface (no web UI).
+RevConnect is a console-based social media application developed using Java, Spring Boot, Spring Data JPA, and MySQL. It simulates core social networking features such as user authentication, posts, likes, comments, following users, and notifications through a command-line interface (CLI). This project demonstrates backend development concepts, clean layered architecture, database relationships, and real-world business logic.
 
-This project was originally built using Core Java and JDBC and later refactored into a clean Spring Boot + JPA
-architecture with proper layering and automated unit tests.
-
---------------------------------------------------------------------
-
-## Features
-
-User Management
-- User registration
-- User login and logout
-
-Posts
-- Create a post
-- View my posts
-- View feed (all users’ posts)
-
-Likes
-- Like a post
-- Unlike a post
-- Prevent duplicate likes
-
-Comments
+FEATURES
+- User registration and login with duplicate prevention
+- Create posts and view personal or global feed
+- Like and unlike posts with duplicate-like prevention
 - Comment on posts
-- Notify post owner when a comment is added
+- Follow and unfollow users with duplicate prevention
+- Notifications for likes, comments, and new followers
+- Seen and unseen notification tracking
 
-Follow System
-- Follow a user
-- Unfollow a user
-
-Notifications
-- Notifications for likes, comments, and follows
-- Seen / unseen notification support
-- View notifications from user dashboard
-
-Testing
-- Automated unit tests using JUnit 5
-- Tests run without console input
-- Separate test profile configuration
-
---------------------------------------------------------------------
-
-## Tech Stack
-
+TECHNOLOGY STACK
 - Java
 - Spring Boot
-- Spring Data JPA
-- Hibernate
+- Spring Data JPA (Hibernate)
 - MySQL
 - Maven
 - JUnit 5
+- Log4j
 - IntelliJ IDEA
-- Git & GitHub
+- Git and GitHub
 
---------------------------------------------------------------------
+PROJECT STRUCTURE
+revconnect-p2
+src/
+├── main/java/com/revconnect
+│    ├── model           → Entities (User, Post, Like, Comment, Notification)
+│    ├── repository      → JPA repos for DB access
+│    ├── service         → Business logic
+│    ├── ConsoleUI.java  → CLI menu & input handling
+│    └── RevConnectApplication.java (Spring Boot entry point)
+└── test/java/com/revconnect
+→ Service tests (Auth, Post, Like, Notification)
 
-## Project Structure
+ARCHITECTURE OVERVIEW
+The application follows a layered architecture:
+Console UI → Service Layer → Repository Layer → MySQL Database
+- Model layer defines database entities
+- Repository layer handles database operations
+- Service layer contains core business logic
+- Console UI manages user input and output
 
-revconnect
-│
-├── pom.xml
-├── README.md
-├── .gitignore
-└── src
-├── main
-│   ├── java
-│   │   └── com.revconnect
-│   │       ├── model
-│   │       ├── repository
-│   │       ├── service
-│   │       ├── ConsoleUI.java
-│   │       └── RevConnectApplication.java
-│   └── resources
-│       └── application.properties
-└── test
-├── java
-│   └── com.revconnect
-│       ├── AuthServiceTest.java
-│       ├── PostServiceTest.java
-│       ├── LikeServiceTest.java
-│       └── NotificationServiceTest.java
-└── resources
-└── application.properties
+HOW THE APPLICATION WORKS
+After starting the application, users interact through a menu-driven console interface.
 
---------------------------------------------------------------------
-
-## Database Setup
-
-Create database in MySQL:
-
-CREATE DATABASE revconnect_p2;
-
-application.properties configuration:
-
-spring.datasource.url=jdbc:mysql://localhost:3306/revconnect_p2
-spring.datasource.username=root
-spring.datasource.password=root
-
-spring.jpa.hibernate.ddl-auto=create-drop
-spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
-
-spring.main.web-application-type=none
-logging.level.root=OFF
-
-Tables are created automatically by Hibernate.
-
---------------------------------------------------------------------
-
-## How to Run the Application
-
-Using Maven:
-mvn spring-boot:run
-
-Using IntelliJ:
-- Open RevConnectApplication.java
-- Click Run
-
---------------------------------------------------------------------
-
-## Sample Console Output
-
-=== RevConnect ===
+Main Menu
 1. Register
 2. Login
 3. Exit
 
-=== User Dashboard ===
+User Dashboard
 1. Create Post
 2. View My Posts
 3. View Feed
@@ -141,40 +62,63 @@ Using IntelliJ:
 9. View Notifications
 10. Logout
 
---------------------------------------------------------------------
+All actions are processed in real time and persisted in the database.
 
-## Running Tests
+TESTING
+- Unit tests are written using JUnit 5
+- Service-layer logic is tested independently
+- Tests run without requiring console input
 
-mvn test
+SETUP AND RUN INSTRUCTIONS
+Prerequisites:
+- Java 17
+- Maven
+- MySQL
+- IntelliJ IDEA (recommended)
 
-- Fully automated
-- No console input required
-- Uses test Spring profile
+Steps:
+1. Clone the repository:
+   git clone https://github.com/pallapusivasai/revconnect-p2.git
+2. Create a MySQL database:
+   CREATE DATABASE revconnect;
+3. Update application.properties with database credentials
+4. Run the application:
+   mvn spring-boot:run
+5. Use the console menu to interact with the application
 
---------------------------------------------------------------------
+DATABASE ENTITIES
+- User
+- Post
+- Comment
+- Like
+- Follow
+- Notification
 
-## Key Concepts Demonstrated
+Entity relationships are implemented using JPA annotations such as @OneToMany, @ManyToOne, and @JoinColumn.
 
-- Console-based Spring Boot application
-- Layered architecture (UI, Service, Repository)
-- JPA entity relationships (OneToMany, ManyToOne)
-- Separation of console input and business logic
-- Preventing duplicate actions (likes, follows)
-- Notification handling
-- Automated unit testing
+KEY CONCEPTS DEMONSTRATED
+- Spring Boot application structure
+- JPA and Hibernate ORM
+- Entity relationships
+- Separation of concerns
+- Duplicate action prevention
+- Console-based UI handling
+- Logging using Log4j
+- Unit testing with JUnit
 
---------------------------------------------------------------------
+FUTURE ENHANCEMENTS
+- Password encryption using BCrypt
+- REST API version of the application
+- Web-based UI using React or Angular
+- Pagination for posts and notifications
+- JWT-based authentication
 
-## Future Enhancements
 
-- Password encryption
-- Pagination for feed
-- REST API version
-- Web-based UI
+AUTHOR
+Siva Sai Pallapu
+Andhra Pradesh, India
+Email: pallapu.sivasai.33@gmail.com
+GitHub: https://github.com/pallapusivasai
 
---------------------------------------------------------------------
-
-## Author
-
-Palla Siva Sai
-Java | Spring Boot | Backend Development
+LICENSE
+This project is created for learning and demonstration purposes.

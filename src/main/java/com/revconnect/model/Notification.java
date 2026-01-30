@@ -11,7 +11,7 @@ public class Notification {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false) // ✅ FIX 1
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(nullable = false)
@@ -20,7 +20,7 @@ public class Notification {
     @Column(nullable = false)
     private boolean seen = false;
 
-    // ✅ REQUIRED getters
+    // getters
     public Long getId() {
         return id;
     }

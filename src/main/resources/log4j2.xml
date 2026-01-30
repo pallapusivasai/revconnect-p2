@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
+<Configuration status="INFO">
 
     <Properties>
         <Property name="LOG_PATTERN">
@@ -16,16 +16,15 @@
         </Console>
 
         <!-- Rolling File -->
-        <RollingFile
-                name="FileLogger"
-                fileName="${LOG_DIR}/revconnect.log"
-                filePattern="${LOG_DIR}/revconnect-%d{yyyy-MM-dd}-%i.log.gz">
+        <RollingFile name="FileLogger"
+                     fileName="${LOG_DIR}/revconnect.log"
+                     filePattern="${LOG_DIR}/revconnect-%d{yyyy-MM-dd}-%i.log.gz">
 
             <PatternLayout pattern="${LOG_PATTERN}"/>
 
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1"/>
-                <SizeBasedTriggeringPolicy size="10 MB"/>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
             </Policies>
 
             <DefaultRolloverStrategy max="14"/>
@@ -35,14 +34,14 @@
 
     <Loggers>
 
-        <!-- 🔴 Application logs: ONLY WARN & ERROR -->
-        <Logger name="com.revconnect" level="warn" additivity="false">
+        <!-- Application logs -->
+        <Logger name="com.revconnect" level="info" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
         </Logger>
 
-        <!-- Root logger -->
-        <Root level="warn">
+        <!-- Root -->
+        <Root level="info">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
         </Root>

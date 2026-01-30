@@ -43,7 +43,7 @@ public class ConsoleUI implements CommandLineRunner {
         this.notificationService = notificationService;
     }
 
-    @Override
+
     public void run(String... args) {
 
         logger.info("Console UI started");
@@ -71,7 +71,7 @@ public class ConsoleUI implements CommandLineRunner {
 
             } catch (RevConnectException ex) {
                 System.out.println("❌ " + ex.getMessage());
-                logger.warn("Business error: {}", ex.getMessage());
+                logger.warn("Business error", ex);
             } catch (Exception ex) {
                 System.out.println("❌ Invalid input");
                 logger.error("Unexpected error", ex);
