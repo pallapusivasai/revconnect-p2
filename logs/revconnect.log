@@ -113,3 +113,8 @@
 2026-01-30 17:05:03 INFO  [main] AuthService - Login attempt for email: test@gmail.com
 2026-01-30 17:05:03 INFO  [main] AuthService - Login successful for email: test@gmail.com
 2026-01-30 17:05:03 INFO  [main] CommentService - User comment@gmail.com commented on post 3
+2026-01-30 17:05:44 INFO  [main] RevConnectApplication - RevConnect application starting
+2026-01-30 17:05:45 INFO  [main] RevConnectApplication - Starting RevConnectApplication using Java 17.0.12 with PID 34680 (D:\revconnect-p2\target\classes started by palla in D:\revconnect-p2)
+2026-01-30 17:05:45 INFO  [main] RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-30 17:05:49 INFO  [main] RevConnectApplication - Started RevConnectApplication in 4.802 seconds (process running for 5.753)
+2026-01-30 17:05:49 INFO  [main] ConsoleUI - Console UI started
