@@ -1,5 +1,6 @@
 package com.revconnect.service;
 
+import com.revconnect.exception.RevConnectException;
 import com.revconnect.model.Post;
 import com.revconnect.model.User;
 import com.revconnect.repository.PostRepository;
@@ -21,7 +22,12 @@ public class PostService {
         this.repo = repo;
     }
 
-    public String createPost(User user, String content) {
+    // Service performs business logic only
+    public void createPost(User user, String content) {
+
+        if (user == null || content == null || content.isBlank()) {
+            throw new RevConnectException("Invalid post content");
+        }
 
         Post post = new Post();
         post.setUser(user);
@@ -29,20 +35,21 @@ public class PostService {
 
         repo.save(post);
 
-        logger.info("Post created by user {}", user.getEmail());
-        return "✅ Post created";
+        logger.info("Post created by {}", user.getEmail());
     }
 
-    public void viewMyPosts(User user) {
+    public List<Post> viewMyPosts(User user) {
+
+        if (user == null) {
+            throw new RevConnectException("Invalid user");
+        }
+
         logger.info("Viewing posts for user {}", user.getEmail());
-        repo.findByUser(user)
-                .forEach(p -> System.out.println("📝 " + p.getContent()));
+        return repo.findByUser(user);
     }
 
-    public void viewFeed() {
+    public List<Post> viewFeed() {
         logger.info("Viewing feed");
-        repo.findAllByOrderByIdDesc()
-                .forEach(p ->
-                        System.out.println(p.getUser().getEmail() + ": " + p.getContent()));
+        return repo.findAllByOrderByIdDesc();
     }
 }

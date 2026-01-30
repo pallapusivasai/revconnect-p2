@@ -1,24 +1,23 @@
 package com.revconnect;
 
-import com.revconnect.exception.RevConnectException;
 import com.revconnect.model.Post;
 import com.revconnect.model.User;
 import com.revconnect.repository.PostRepository;
 import com.revconnect.repository.UserRepository;
-import com.revconnect.service.LikeService;
+import com.revconnect.service.CommentService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 @SpringBootTest
 @ActiveProfiles("test")
-class LikeServiceTest {
+class CommentServiceTest {
 
     @Autowired
-    private LikeService likeService;
+    private CommentService commentService;
 
     @Autowired
     private UserRepository userRepo;
@@ -27,27 +26,20 @@ class LikeServiceTest {
     private PostRepository postRepo;
 
     @Test
-    void testDuplicateLikePrevention() {
+    void testAddComment() {
 
         User user = new User();
-        user.setEmail("like@gmail.com");
+        user.setEmail("comment@gmail.com");
         user.setPassword("1234");
         userRepo.save(user);
 
         Post post = new Post();
         post.setUser(user);
-        post.setContent("Test Post");
+        post.setContent("My Post");
         postRepo.save(post);
 
-        Long postId = post.getId();
-
-        // first like → should succeed
-        assertDoesNotThrow(() -> likeService.like(user, postId));
-
-        // second like → should fail
-        assertThrows(
-                RevConnectException.class,
-                () -> likeService.like(user, postId)
+        assertDoesNotThrow(() ->
+                commentService.comment(user, post.getId(), "Nice post")
         );
     }
 }

@@ -1,5 +1,6 @@
 package com.revconnect.service;
 
+import com.revconnect.exception.RevConnectException;
 import com.revconnect.model.User;
 import com.revconnect.repository.UserRepository;
 import org.apache.logging.log4j.LogManager;
@@ -18,36 +19,41 @@ public class AuthService {
         this.repo = repo;
     }
 
-    public String register(String email, String password) {
+    // Service performs action, does not return UI message
+    public void register(String email, String password) {
 
         logger.info("Registration attempt for email: {}", email);
 
+        if (email.isBlank() || password.isBlank()) {
+            throw new RevConnectException("Email and password cannot be empty");
+        }
+
         if (repo.findByEmail(email).isPresent()) {
-            logger.warn("Registration failed - user exists: {}", email);
-            return "❌ User already exists";
+            logger.warn("User already exists: {}", email);
+            throw RevConnectException.userAlreadyExists(email);
         }
 
         User u = new User();
         u.setEmail(email);
-        u.setPassword(password);
+        u.setPassword(password); // (plain text for now)
 
         repo.save(u);
 
         logger.info("Registration successful for email: {}", email);
-        return "✅ Registered successfully";
     }
 
     public User login(String email, String password) {
 
         logger.info("Login attempt for email: {}", email);
 
-        User user = repo.findByEmailAndPassword(email, password).orElse(null);
+        if (email.isBlank() || password.isBlank()) {
+            throw new RevConnectException("Email and password cannot be empty");
+        }
 
-        if (user == null)
-            logger.warn("Login failed for email: {}", email);
-        else
-            logger.info("Login successful for email: {}", email);
-
-        return user;
+        return repo.findByEmailAndPassword(email, password)
+                .orElseThrow(() -> {
+                    logger.warn("Invalid login for email: {}", email);
+                    return RevConnectException.invalidCredentials();
+                });
     }
 }

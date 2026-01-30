@@ -1,5 +1,6 @@
 package com.revconnect.service;
 
+import com.revconnect.exception.RevConnectException;
 import com.revconnect.model.*;
 import com.revconnect.repository.*;
 import org.apache.logging.log4j.LogManager;
@@ -16,20 +17,23 @@ public class CommentService {
     private final PostRepository postRepo;
     private final NotificationService notify;
 
-    public CommentService(
-            CommentRepository repo,
-            PostRepository postRepo,
-            NotificationService notify
-    ) {
+    public CommentService(CommentRepository repo,
+                          PostRepository postRepo,
+                          NotificationService notify) {
         this.repo = repo;
         this.postRepo = postRepo;
         this.notify = notify;
     }
 
-    public String comment(User user, Long postId, String text) {
+    public void comment(User user, Long postId, String text) {
 
-        Post post = postRepo.findById(postId).orElse(null);
-        if (post == null) return "❌ Post not found";
+        if (user == null || postId == null || text == null || text.isBlank()) {
+            throw new RevConnectException("Invalid comment request");
+        }
+
+        Post post = postRepo.findById(postId)
+                .orElseThrow(() ->
+                        new RevConnectException("Post not found"));
 
         Comment c = new Comment();
         c.setPost(post);
@@ -38,12 +42,14 @@ public class CommentService {
 
         repo.save(c);
 
+        // ✅ notification (already correct)
         if (!post.getUser().getId().equals(user.getId())) {
-            notify.send(post.getUser(),
-                    user.getEmail() + " commented on your post 💬");
+            notify.send(
+                    post.getUser(),
+                    user.getEmail() + " commented on your post 💬"
+            );
         }
 
         logger.info("User {} commented on post {}", user.getEmail(), postId);
-        return "💬 Comment added";
     }
 }

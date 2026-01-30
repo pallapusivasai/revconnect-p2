@@ -31,3 +31,25 @@
 2026-01-29 13:00:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-01-29 13:00:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
 2026-01-29 13:00:13 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 09:33:01 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 09:33:02 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 10:32:09 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 10:32:09 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 10:36:25 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 10:36:25 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 10:39:16 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 10:39:17 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 12:06:05 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.AuthServiceTest]: AuthServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 12:06:05 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.AuthServiceTest
+2026-01-30 12:09:26 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 12:09:26 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 12:09:52 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 12:13:45 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 12:25:45 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 12:28:54 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 12:40:02 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 12:46:23 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 12:47:41 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 12:58:18 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.AuthServiceTest]: AuthServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 12:58:18 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.AuthServiceTest
+2026-01-30 12:58:43 INFO  com.revconnect.RevConnectApplication - RevConnect application starting

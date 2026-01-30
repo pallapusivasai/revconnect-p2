@@ -1,5 +1,6 @@
 package com.revconnect.service;
 
+import com.revconnect.exception.RevConnectException;
 import com.revconnect.model.*;
 import com.revconnect.repository.*;
 import org.apache.logging.log4j.LogManager;
@@ -16,49 +17,61 @@ public class LikeService {
     private final PostRepository postRepo;
     private final NotificationService notify;
 
-    public LikeService(
-            LikeRepository likeRepo,
-            PostRepository postRepo,
-            NotificationService notify
-    ) {
+    public LikeService(LikeRepository likeRepo,
+                       PostRepository postRepo,
+                       NotificationService notify) {
         this.likeRepo = likeRepo;
         this.postRepo = postRepo;
         this.notify = notify;
     }
 
-    public String like(User user, Long postId) {
+    public void like(User user, Long postId) {
 
-        Post post = postRepo.findById(postId).orElse(null);
-        if (post == null) return "❌ Post not found";
+        if (user == null || postId == null) {
+            throw new RevConnectException("Invalid like request");
+        }
 
-        if (likeRepo.findByPostAndUser(post, user).isPresent())
-            return "⚠ Already liked";
+        Post post = postRepo.findById(postId)
+                .orElseThrow(() ->
+                        new RevConnectException("Post not found"));
 
-        LikeEntity l = new LikeEntity();
-        l.setPost(post);
-        l.setUser(user);
-        likeRepo.save(l);
+        if (likeRepo.findByPostAndUser(post, user).isPresent()) {
+            throw new RevConnectException("Post already liked");
+        }
 
+        LikeEntity like = new LikeEntity();
+        like.setPost(post);
+        like.setUser(user);
+
+        likeRepo.save(like);
+
+        // ✅ notification (already correct)
         if (!post.getUser().getId().equals(user.getId())) {
-            notify.send(post.getUser(),
-                    user.getEmail() + " liked your post ❤️");
+            notify.send(
+                    post.getUser(),
+                    user.getEmail() + " liked your post ❤️"
+            );
         }
 
         logger.info("Post {} liked by {}", postId, user.getEmail());
-        return "❤️ Post liked";
     }
 
-    public String unlike(User user, Long postId) {
+    public void unlike(User user, Long postId) {
 
-        Post post = postRepo.findById(postId).orElse(null);
-        if (post == null) return "❌ Post not found";
+        if (user == null || postId == null) {
+            throw new RevConnectException("Invalid unlike request");
+        }
 
-        return likeRepo.findByPostAndUser(post, user)
-                .map(l -> {
-                    likeRepo.delete(l);
-                    logger.info("Post {} unliked by {}", postId, user.getEmail());
-                    return "💔 Post unliked";
-                })
-                .orElse("⚠ Not liked yet");
+        Post post = postRepo.findById(postId)
+                .orElseThrow(() ->
+                        new RevConnectException("Post not found"));
+
+        LikeEntity like = likeRepo.findByPostAndUser(post, user)
+                .orElseThrow(() ->
+                        new RevConnectException("You have not liked this post"));
+
+        likeRepo.delete(like);
+
+        logger.info("Post {} unliked by {}", postId, user.getEmail());
     }
 }
