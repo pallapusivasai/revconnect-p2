@@ -1,4 +1,4 @@
-package com.revconnect;
+package java.com.revconnect;
 
 import com.revconnect.model.Post;
 import com.revconnect.model.User;
@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
 
 @SpringBootTest
 @ActiveProfiles("test")

@@ -1,15 +1,14 @@
-package com.revconnect;
+package java.com.revconnect;
 
 import com.revconnect.model.User;
-import com.revconnect.service.NotificationService;
 import com.revconnect.repository.UserRepository;
+import com.revconnect.service.NotificationService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.*;
 import org.springframework.test.context.ActiveProfiles;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -23,6 +22,7 @@ class NotificationServiceTest {
 
     @Test
     void testNotificationSeenLogic() {
+
         User user = new User();
         user.setEmail("notify@gmail.com");
         user.setPassword("1234");
@@ -30,12 +30,7 @@ class NotificationServiceTest {
 
         notificationService.send(user, "Test notification");
 
-        // first view → shown
-        notificationService.view(user);
-
-        // second view → nothing (seen)
-        notificationService.view(user);
-
-        assertTrue(true); // no exception = pass
+        assertDoesNotThrow(() -> notificationService.view(user));
+        assertDoesNotThrow(() -> notificationService.view(user));
     }
 }

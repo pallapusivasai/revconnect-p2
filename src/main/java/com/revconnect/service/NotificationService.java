@@ -23,50 +23,84 @@ public class NotificationService {
         this.repo = repo;
     }
 
+    /**
+     * Send a notification to a user
+     */
     public void send(User user, String message) {
 
-        if (user == null || user.getId() == null ||
-                message == null || message.isBlank()) {
-            throw new RevConnectException("Invalid notification request");
+        if (user == null || user.getId() == null) {
+            logger.warn("Attempt to send notification to invalid user");
+            throw new RevConnectException("Invalid user");
         }
 
-        Notification n = new Notification();
-        n.setUser(user);
-        n.setMessage(message);
-        n.setSeen(false);
+        if (message == null || message.isBlank()) {
+            logger.warn("Attempt to send empty notification to user {}", user.getEmail());
+            throw new RevConnectException("Notification message cannot be empty");
+        }
 
-        repo.save(n);
+        try {
+            Notification notification = new Notification();
+            notification.setUser(user);
+            notification.setMessage(message);
+            notification.setSeen(false);
 
-        logger.info("Notification sent to user {}", user.getEmail());
+            repo.save(notification);
+
+            logger.info("Notification sent to user {}", user.getEmail());
+
+        } catch (Exception e) {
+            logger.error(
+                    "Failed to send notification to user {}",
+                    user.getEmail(),
+                    e
+            );
+            throw new RevConnectException("Failed to send notification");
+        }
     }
 
-    // ✅ FIXED: transactional + batch update
+    /**
+     * View unread notifications (marks them as seen)
+     */
     @Transactional
     public List<String> view(User user) {
 
         if (user == null || user.getId() == null) {
+            logger.warn("Invalid notification view request");
             throw new RevConnectException("Invalid user");
         }
 
-        List<Notification> list =
-                repo.findByUser_IdAndSeenFalse(user.getId());
+        try {
+            List<Notification> notifications =
+                    repo.findByUser_IdAndSeenFalse(user.getId());
 
-        if (list.isEmpty()) {
-            logger.info("No new notifications for {}", user.getEmail());
-            return List.of();
+            if (notifications.isEmpty()) {
+                logger.info("No new notifications for {}", user.getEmail());
+                return List.of();
+            }
+
+            // mark all as seen
+            notifications.forEach(n -> n.setSeen(true));
+
+            // batch save
+            repo.saveAll(notifications);
+
+            logger.info(
+                    "User {} viewed {} notifications",
+                    user.getEmail(),
+                    notifications.size()
+            );
+
+            return notifications.stream()
+                    .map(Notification::getMessage)
+                    .toList();
+
+        } catch (Exception e) {
+            logger.error(
+                    "Error while fetching notifications for user {}",
+                    user.getEmail(),
+                    e
+            );
+            throw new RevConnectException("Failed to load notifications");
         }
-
-        // mark all as seen
-        list.forEach(n -> n.setSeen(true));
-
-        // save in ONE DB call
-        repo.saveAll(list);
-
-        logger.info("User {} viewed {} notifications",
-                user.getEmail(), list.size());
-
-        return list.stream()
-                .map(Notification::getMessage)
-                .toList();
     }
 }

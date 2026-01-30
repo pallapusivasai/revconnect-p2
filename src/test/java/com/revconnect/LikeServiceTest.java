@@ -1,6 +1,5 @@
-package com.revconnect;
+package java.com.revconnect;
 
-import com.revconnect.exception.RevConnectException;
 import com.revconnect.model.Post;
 import com.revconnect.model.User;
 import com.revconnect.repository.PostRepository;
@@ -9,12 +8,12 @@ import com.revconnect.service.LikeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@ActiveProfiles("test")
 class LikeServiceTest {
 
     @Autowired
@@ -28,7 +27,6 @@ class LikeServiceTest {
 
     @Test
     void testDuplicateLikePrevention() {
-
         User user = new User();
         user.setEmail("like@gmail.com");
         user.setPassword("1234");
@@ -39,15 +37,13 @@ class LikeServiceTest {
         post.setContent("Test Post");
         postRepo.save(post);
 
-        Long postId = post.getId();
+        Scanner sc = new Scanner(post.getId() + "\n");
+        String first = likeService.like(user, sc);
 
-        // first like → should succeed
-        assertDoesNotThrow(() -> likeService.like(user, postId));
+        Scanner sc2 = new Scanner(post.getId() + "\n");
+        String second = likeService.like(user, sc2);
 
-        // second like → should fail
-        assertThrows(
-                RevConnectException.class,
-                () -> likeService.like(user, postId)
-        );
+        assertEquals("❤️ Post liked", first);
+        assertEquals("⚠ Already liked", second);
     }
 }

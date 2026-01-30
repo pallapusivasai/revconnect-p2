@@ -1,4 +1,4 @@
-package com.revconnect;
+package java.com.revconnect;
 
 import com.revconnect.exception.RevConnectException;
 import com.revconnect.model.User;
@@ -25,6 +25,7 @@ class AuthServiceTest {
         );
 
         User user = authService.login("test@gmail.com", "1234");
+
         assertNotNull(user);
         assertEquals("test@gmail.com", user.getEmail());
     }

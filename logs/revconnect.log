@@ -1,55 +1,406 @@
-2026-01-29 10:59:16 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 10:59:47 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 11:04:03 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:07:03 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:19:41 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:20:01 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:28:55 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:33:55 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:35:55 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:39:38 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:44:21 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:53:10 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:59:52 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-29 12:59:53 INFO  com.revconnect.RevConnectApplication - Starting RevConnectApplication using Java 17.0.12 with PID 13696 (D:\revconnect-p2\target\classes started by palla in D:\revconnect-p2)
-2026-01-29 12:59:53 INFO  com.revconnect.RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
-2026-01-29 12:59:54 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-29 12:59:54 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 6 JPA repository interfaces.
-2026-01-29 12:59:54 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-29 12:59:54 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-01-29 12:59:54 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-01-29 12:59:55 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-29 12:59:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-01-29 12:59:55 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49c1e294
-2026-01-29 12:59:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-01-29 12:59:55 WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-01-29 12:59:57 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-29 12:59:57 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-29 12:59:58 INFO  com.revconnect.RevConnectApplication - Started RevConnectApplication in 5.41 seconds (process running for 6.404)
-2026-01-29 12:59:58 INFO  com.revconnect.ConsoleUI - Console UI started
-2026-01-29 13:00:10 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-29 13:00:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-01-29 13:00:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-01-29 13:00:13 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-30 09:33:01 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-30 09:33:02 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
-2026-01-30 10:32:09 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-30 10:32:09 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
-2026-01-30 10:36:25 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-30 10:36:25 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
-2026-01-30 10:39:16 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-30 10:39:17 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
-2026-01-30 12:06:05 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.AuthServiceTest]: AuthServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-30 12:06:05 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.AuthServiceTest
-2026-01-30 12:09:26 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-30 12:09:26 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
-2026-01-30 12:09:52 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-30 12:13:45 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-30 12:25:45 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-30 12:28:54 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-30 12:40:02 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-30 12:46:23 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-30 12:47:41 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
-2026-01-30 12:58:18 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.AuthServiceTest]: AuthServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-30 12:58:18 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.AuthServiceTest
-2026-01-30 12:58:43 INFO  com.revconnect.RevConnectApplication - RevConnect application starting
+2026-01-30 14:32:30 INFO  [main] RevConnectApplication - RevConnect application starting
+2026-01-30 14:32:30 INFO  [main] RevConnectApplication - Starting RevConnectApplication using Java 17.0.12 with PID 16076 (D:\revconnect-p2\target\classes started by palla in D:\revconnect-p2)
+2026-01-30 14:32:30 INFO  [main] RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-30 14:32:33 INFO  [main] RevConnectApplication - Started RevConnectApplication in 3.177 seconds (process running for 3.733)
+2026-01-30 14:32:33 INFO  [main] ConsoleUI - Console UI started
+2026-01-30 14:32:57 INFO  [main] AuthService - Registration attempt for email: sivasai@gmail.com
+2026-01-30 14:32:57 INFO  [main] AuthService - Registration successful for email: sivasai@gmail.com
+2026-01-30 14:38:34 INFO  [main] AuthService - Registration attempt for email: 
+2026-01-30 14:38:34 WARN  [main] ConsoleUI - Business error: Email and password cannot be empty
+2026-01-30 14:38:40 INFO  [Thread-1] ConsoleUI - Console UI stopped
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.NumberFormatException: For input string: "�"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:38:40 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:39:06 WARN  [main] AuthService - Invalid login for email: siva@gmail.com
+2026-01-30 14:39:06 WARN  [main] ConsoleUI - Business error: Invalid email or password
+2026-01-30 14:40:10 ERROR [main] ConsoleUI - Unexpected error
+java.lang.NumberFormatException: For input string: "�"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:40:10 ERROR [main] ConsoleUI - Unexpected error
+java.lang.IllegalStateException: Scanner closed
+	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150) ~[?:?]
+	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781) ~[?:?]
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1649) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:40:46 ERROR [main] ConsoleUI - Unexpected error
+java.lang.NumberFormatException: For input string: "�"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 14:49:10 ERROR [main] ConsoleUI - Unexpected error
+java.lang.NumberFormatException: For input string: "�"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.revconnect.ConsoleUI.run(ConsoleUI.java:60) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.8.jar:3.2.8]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) [?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.2.8.jar:3.2.8]
+	at com.revconnect.RevConnectApplication.main(RevConnectApplication.java:17) [classes/:?]
+2026-01-30 15:03:17 WARN  [main] LikeService - User like@gmail.com already liked post 1
+2026-01-30 15:03:17 WARN  [main] AuthService - User already exists: dup@gmail.com
+2026-01-30 15:19:47 WARN  [main] LikeService - User like@gmail.com already liked post 1
+2026-01-30 15:19:48 WARN  [main] AuthService - User already exists: dup@gmail.com

@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="INFO">
+<Configuration status="WARN">
+
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss} %-5level [%t] %c{1} - %msg%n
+        </Property>
+        <Property name="LOG_DIR">logs</Property>
+    </Properties>
+
     <Appenders>
-        <Console name="Console">
-            <PatternLayout pattern="%d{HH:mm:ss} %-5level %c - %msg%n"/>
+
+        <!-- Console -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
-        <File name="FileLogger" fileName="logs/revconnect.log">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %c - %msg%n"/>
-        </File>
+
+        <!-- Rolling File -->
+        <RollingFile
+                name="FileLogger"
+                fileName="${LOG_DIR}/revconnect.log"
+                filePattern="${LOG_DIR}/revconnect-%d{yyyy-MM-dd}-%i.log.gz">
+
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="14"/>
+        </RollingFile>
+
     </Appenders>
 
     <Loggers>
-        <Root level="info">
+
+        <!-- 🔴 Application logs: ONLY WARN & ERROR -->
+        <Logger name="com.revconnect" level="warn" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+
+        <!-- Root logger -->
+        <Root level="warn">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
         </Root>
+
     </Loggers>
+
 </Configuration>
