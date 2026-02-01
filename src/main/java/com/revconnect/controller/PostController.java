@@ -1,28 +1,29 @@
 package com.revconnect.controller;
 
-import com.revconnect.model.Post;
+import com.revconnect.model.User;
 import com.revconnect.service.PostService;
+import com.revconnect.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/posts")
 public class PostController {
 
     private final PostService postService;
+    private final UserRepository userRepository;
 
-    public PostController(PostService postService) {
+    public PostController(PostService postService,
+                          UserRepository userRepository) {
         this.postService = postService;
+        this.userRepository = userRepository;
     }
 
-    @PostMapping
-    public Post createPost(@RequestBody Post post) {
-        return postService.createPost(post);
-    }
+    @PostMapping("/{userId}")
+    public String createPost(@PathVariable Long userId,
+                             @RequestBody String content) {
 
-    @GetMapping
-    public List<Post> getAllPosts() {
-        return postService.getAllPosts();
+        User user = userRepository.findById(userId).orElseThrow();
+        postService.createPost(user, content);
+        return "Post created successfully";
     }
 }
