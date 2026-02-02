@@ -1,0 +1,120 @@
+2026-01-30 16:49:12 INFO  [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 16:49:13 INFO  [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 16:49:13 INFO  [main] LikeServiceTest - Starting LikeServiceTest using Java 17.0.12 with PID 5808 (started by palla in D:\revconnect-p2)
+2026-01-30 16:49:13 INFO  [main] LikeServiceTest - The following 1 profile is active: "test"
+2026-01-30 16:49:19 INFO  [main] LikeServiceTest - Started LikeServiceTest in 6.521 seconds (process running for 8.491)
+2026-01-30 16:49:21 INFO  [main] LikeService - Post 1 liked by like@test.com
+2026-01-30 16:49:21 WARN  [main] LikeService - User like@test.com already liked post 1
+2026-01-30 16:49:21 INFO  [main] NotificationService - Notification sent to user d@gmail.com
+2026-01-30 16:49:21 INFO  [main] FollowService - c@gmail.com followed d@gmail.com
+2026-01-30 16:49:21 INFO  [main] NotificationService - Notification sent to user b@gmail.com
+2026-01-30 16:49:21 INFO  [main] FollowService - a@gmail.com followed b@gmail.com
+2026-01-30 16:49:21 INFO  [main] FollowService - a@gmail.com unfollowed b@gmail.com
+2026-01-30 16:49:21 INFO  [main] NotificationService - Notification sent to user notify@gmail.com
+2026-01-30 16:49:21 INFO  [main] NotificationService - User notify@gmail.com viewed 1 notifications
+2026-01-30 16:49:21 INFO  [main] NotificationService - No new notifications for notify@gmail.com
+2026-01-30 16:49:21 INFO  [main] PostService - Post successfully created by user: post@gmail.com
+2026-01-30 16:49:21 INFO  [main] AuthService - Registration attempt for email: dup@gmail.com
+2026-01-30 16:49:21 INFO  [main] AuthService - Registration successful for email: dup@gmail.com
+2026-01-30 16:49:21 INFO  [main] AuthService - Registration attempt for email: dup@gmail.com
+2026-01-30 16:49:21 WARN  [main] AuthService - User already exists: dup@gmail.com
+2026-01-30 16:49:21 INFO  [main] AuthService - Registration attempt for email: test@gmail.com
+2026-01-30 16:49:21 INFO  [main] AuthService - Registration successful for email: test@gmail.com
+2026-01-30 16:49:21 INFO  [main] AuthService - Login attempt for email: test@gmail.com
+2026-01-30 16:49:22 INFO  [main] AuthService - Login successful for email: test@gmail.com
+2026-01-30 16:49:22 INFO  [main] CommentService - User comment@gmail.com commented on post 3
+2026-01-30 16:49:40 INFO  [main] RevConnectApplication - RevConnect application starting
+2026-01-30 16:49:40 INFO  [main] RevConnectApplication - Starting RevConnectApplication using Java 17.0.12 with PID 5380 (D:\revconnect-p2\target\classes started by palla in D:\revconnect-p2)
+2026-01-30 16:49:40 INFO  [main] RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-30 16:49:45 INFO  [main] RevConnectApplication - Started RevConnectApplication in 5.145 seconds (process running for 6.08)
+2026-01-30 16:49:45 INFO  [main] ConsoleUI - Console UI started
+2026-01-30 16:49:59 INFO  [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 16:49:59 INFO  [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 16:50:00 INFO  [main] LikeServiceTest - Starting LikeServiceTest using Java 17.0.12 with PID 21044 (started by palla in D:\revconnect-p2)
+2026-01-30 16:50:00 INFO  [main] LikeServiceTest - The following 1 profile is active: "test"
+2026-01-30 16:50:06 INFO  [main] LikeServiceTest - Started LikeServiceTest in 6.253 seconds (process running for 8.236)
+2026-01-30 16:50:07 INFO  [main] LikeService - Post 1 liked by like@test.com
+2026-01-30 16:50:07 WARN  [main] LikeService - User like@test.com already liked post 1
+2026-01-30 16:50:07 INFO  [main] NotificationService - Notification sent to user d@gmail.com
+2026-01-30 16:50:07 INFO  [main] FollowService - c@gmail.com followed d@gmail.com
+2026-01-30 16:50:07 INFO  [main] NotificationService - Notification sent to user b@gmail.com
+2026-01-30 16:50:07 INFO  [main] FollowService - a@gmail.com followed b@gmail.com
+2026-01-30 16:50:07 INFO  [main] FollowService - a@gmail.com unfollowed b@gmail.com
+2026-01-30 16:50:07 INFO  [main] NotificationService - Notification sent to user notify@gmail.com
+2026-01-30 16:50:07 INFO  [main] NotificationService - User notify@gmail.com viewed 1 notifications
+2026-01-30 16:50:07 INFO  [main] NotificationService - No new notifications for notify@gmail.com
+2026-01-30 16:50:07 INFO  [main] PostService - Post successfully created by user: post@gmail.com
+2026-01-30 16:50:07 INFO  [main] AuthService - Registration attempt for email: dup@gmail.com
+2026-01-30 16:50:07 INFO  [main] AuthService - Registration successful for email: dup@gmail.com
+2026-01-30 16:50:07 INFO  [main] AuthService - Registration attempt for email: dup@gmail.com
+2026-01-30 16:50:07 WARN  [main] AuthService - User already exists: dup@gmail.com
+2026-01-30 16:50:07 INFO  [main] AuthService - Registration attempt for email: test@gmail.com
+2026-01-30 16:50:07 INFO  [main] AuthService - Registration successful for email: test@gmail.com
+2026-01-30 16:50:07 INFO  [main] AuthService - Login attempt for email: test@gmail.com
+2026-01-30 16:50:08 INFO  [main] AuthService - Login successful for email: test@gmail.com
+2026-01-30 16:50:08 INFO  [main] CommentService - User comment@gmail.com commented on post 3
+2026-01-30 16:51:19 INFO  [main] RevConnectApplication - RevConnect application starting
+2026-01-30 16:51:19 INFO  [main] RevConnectApplication - Starting RevConnectApplication using Java 17.0.12 with PID 23436 (D:\revconnect-p2\target\classes started by palla in D:\revconnect-p2)
+2026-01-30 16:51:19 INFO  [main] RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-30 16:51:24 INFO  [main] RevConnectApplication - Started RevConnectApplication in 4.997 seconds (process running for 5.895)
+2026-01-30 16:51:24 INFO  [main] ConsoleUI - Console UI started
+2026-01-30 16:51:43 INFO  [main] RevConnectApplication - RevConnect application starting
+2026-01-30 16:51:43 INFO  [main] RevConnectApplication - Starting RevConnectApplication using Java 17.0.12 with PID 12148 (D:\revconnect-p2\target\classes started by palla in D:\revconnect-p2)
+2026-01-30 16:51:43 INFO  [main] RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-30 16:51:48 INFO  [main] RevConnectApplication - Started RevConnectApplication in 4.994 seconds (process running for 5.948)
+2026-01-30 16:51:48 INFO  [main] ConsoleUI - Console UI started
+2026-01-30 16:59:10 INFO  [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 16:59:10 INFO  [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 16:59:11 INFO  [main] LikeServiceTest - Starting LikeServiceTest using Java 17.0.12 with PID 13104 (started by palla in D:\revconnect-p2)
+2026-01-30 16:59:11 INFO  [main] LikeServiceTest - The following 1 profile is active: "test"
+2026-01-30 16:59:17 INFO  [main] LikeServiceTest - Started LikeServiceTest in 6.42 seconds (process running for 8.457)
+2026-01-30 16:59:18 INFO  [main] LikeService - Post 1 liked by like@test.com
+2026-01-30 16:59:18 WARN  [main] LikeService - User like@test.com already liked post 1
+2026-01-30 16:59:18 INFO  [main] NotificationService - Notification sent to user d@gmail.com
+2026-01-30 16:59:18 INFO  [main] FollowService - c@gmail.com followed d@gmail.com
+2026-01-30 16:59:18 INFO  [main] NotificationService - Notification sent to user b@gmail.com
+2026-01-30 16:59:18 INFO  [main] FollowService - a@gmail.com followed b@gmail.com
+2026-01-30 16:59:18 INFO  [main] FollowService - a@gmail.com unfollowed b@gmail.com
+2026-01-30 16:59:18 INFO  [main] NotificationService - Notification sent to user notify@gmail.com
+2026-01-30 16:59:18 INFO  [main] NotificationService - User notify@gmail.com viewed 1 notifications
+2026-01-30 16:59:18 INFO  [main] NotificationService - No new notifications for notify@gmail.com
+2026-01-30 16:59:18 INFO  [main] PostService - Post successfully created by user: post@gmail.com
+2026-01-30 16:59:18 INFO  [main] AuthService - Registration attempt for email: dup@gmail.com
+2026-01-30 16:59:19 INFO  [main] AuthService - Registration successful for email: dup@gmail.com
+2026-01-30 16:59:19 INFO  [main] AuthService - Registration attempt for email: dup@gmail.com
+2026-01-30 16:59:19 WARN  [main] AuthService - User already exists: dup@gmail.com
+2026-01-30 16:59:19 INFO  [main] AuthService - Registration attempt for email: test@gmail.com
+2026-01-30 16:59:19 INFO  [main] AuthService - Registration successful for email: test@gmail.com
+2026-01-30 16:59:19 INFO  [main] AuthService - Login attempt for email: test@gmail.com
+2026-01-30 16:59:19 INFO  [main] AuthService - Login successful for email: test@gmail.com
+2026-01-30 16:59:19 INFO  [main] CommentService - User comment@gmail.com commented on post 3
+2026-01-30 17:04:54 INFO  [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revconnect.LikeServiceTest]: LikeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-30 17:04:54 INFO  [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revconnect.RevConnectApplication for test class com.revconnect.LikeServiceTest
+2026-01-30 17:04:55 INFO  [main] LikeServiceTest - Starting LikeServiceTest using Java 17.0.12 with PID 21204 (started by palla in D:\revconnect-p2)
+2026-01-30 17:04:55 INFO  [main] LikeServiceTest - The following 1 profile is active: "test"
+2026-01-30 17:05:01 INFO  [main] LikeServiceTest - Started LikeServiceTest in 6.296 seconds (process running for 8.205)
+2026-01-30 17:05:02 INFO  [main] LikeService - Post 1 liked by like@test.com
+2026-01-30 17:05:02 WARN  [main] LikeService - User like@test.com already liked post 1
+2026-01-30 17:05:02 INFO  [main] NotificationService - Notification sent to user d@gmail.com
+2026-01-30 17:05:02 INFO  [main] FollowService - c@gmail.com followed d@gmail.com
+2026-01-30 17:05:02 INFO  [main] NotificationService - Notification sent to user b@gmail.com
+2026-01-30 17:05:02 INFO  [main] FollowService - a@gmail.com followed b@gmail.com
+2026-01-30 17:05:02 INFO  [main] FollowService - a@gmail.com unfollowed b@gmail.com
+2026-01-30 17:05:03 INFO  [main] NotificationService - Notification sent to user notify@gmail.com
+2026-01-30 17:05:03 INFO  [main] NotificationService - User notify@gmail.com viewed 1 notifications
+2026-01-30 17:05:03 INFO  [main] NotificationService - No new notifications for notify@gmail.com
+2026-01-30 17:05:03 INFO  [main] PostService - Post successfully created by user: post@gmail.com
+2026-01-30 17:05:03 INFO  [main] AuthService - Registration attempt for email: dup@gmail.com
+2026-01-30 17:05:03 INFO  [main] AuthService - Registration successful for email: dup@gmail.com
+2026-01-30 17:05:03 INFO  [main] AuthService - Registration attempt for email: dup@gmail.com
+2026-01-30 17:05:03 WARN  [main] AuthService - User already exists: dup@gmail.com
+2026-01-30 17:05:03 INFO  [main] AuthService - Registration attempt for email: test@gmail.com
+2026-01-30 17:05:03 INFO  [main] AuthService - Registration successful for email: test@gmail.com
+2026-01-30 17:05:03 INFO  [main] AuthService - Login attempt for email: test@gmail.com
+2026-01-30 17:05:03 INFO  [main] AuthService - Login successful for email: test@gmail.com
+2026-01-30 17:05:03 INFO  [main] CommentService - User comment@gmail.com commented on post 3
+2026-01-30 17:05:44 INFO  [main] RevConnectApplication - RevConnect application starting
+2026-01-30 17:05:45 INFO  [main] RevConnectApplication - Starting RevConnectApplication using Java 17.0.12 with PID 34680 (D:\revconnect-p2\target\classes started by palla in D:\revconnect-p2)
+2026-01-30 17:05:45 INFO  [main] RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-30 17:05:49 INFO  [main] RevConnectApplication - Started RevConnectApplication in 4.802 seconds (process running for 5.753)
+2026-01-30 17:05:49 INFO  [main] ConsoleUI - Console UI started
